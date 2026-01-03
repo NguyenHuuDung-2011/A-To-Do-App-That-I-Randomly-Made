@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App - Something I Randomly Made</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   </head>
   <body>
     <h1>Todo App</h1>
@@ -18,8 +20,13 @@
     </form>
     <h3>Your tasks:</h3>
     {% for item in todoitems %}
-      <p>{{ item.title }}</p>
-      <hr />
+      <div class="todo-item" id="todo-{{ item.id }}">
+        <p>{{ item.title }}</p>
+        <p>{{ item.description }}</p>
+        <input type="checkbox" class="todo-checkbox" data-id="{{ item.id }}"></input>
+      </div>
     {% endfor %}
+
+    <script src="{% static 'js/mainscripts.js' %}"></script>
   </body>
 </html>

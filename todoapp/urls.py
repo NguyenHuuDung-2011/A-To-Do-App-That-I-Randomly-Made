@@ -3,4 +3,5 @@ from .views import *
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
+    path('delete/<int:pk>/', deleteTodo, name='delete-todo'),
 ]

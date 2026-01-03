@@ -55,7 +55,7 @@ Planned features:
 - Store data by using SQLite3
 
 ## Version
-Current version: 0.1.0
+Current version: 0.1.2
 
 ## Changelog
 See [CHANGELOG.md](CHANGELOG.md)

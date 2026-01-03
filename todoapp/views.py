@@ -1,4 +1,5 @@
-from django.shortcuts import redirect
+from django.shortcuts import redirect, get_object_or_404
+from django.http import JsonResponse
 from django.views.generic import ListView
 from .models import *
 
@@ -23,3 +24,10 @@ class HomeView(ListView):
             )
 
         return redirect('home')
+    
+def deleteTodo(request, pk):
+    if request.method == 'POST':
+        item = get_object_or_404(TodoItem, id=pk)
+        item.delete()
+        return JsonResponse({'status': 'success'})
+    return JsonResponse({'status': 'fail'}, status=400)
