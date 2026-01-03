@@ -1,6 +1,10 @@
 # Changelog
 
-## [0.1.2] - 2026-01-3
+## [0.1.3] - 2026-01-03
+### Added
+- Using PostgreSQL instead of SQLite3 for the longer storing
+
+## [0.1.2] - 2026-01-03
 ### Added
 - Allow deleting todo items when is done by using JavaScript
 - Add CSS file for better UI

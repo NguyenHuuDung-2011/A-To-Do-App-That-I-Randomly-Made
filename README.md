@@ -1,13 +1,11 @@
 # A-To-Do-App-That-I-Randomly-Made
-This is my first actually project that I seriously made for practicing. This to-do application can add new to-do, delete a to-do whenever it is done, and modify it if needed.
+This is my first project that I made for practicing. This to-do application can add new to-do, delete a to-do whenever it is done, and modify it if needed.
 
 ## Features
 In this application, you can use it to replace a normal to-do list as it can:
 
 1. Add a to-do: You can set some info like title, description, deadline.
 2. Remove a to-do: If thing is done, you can click the checkbox and it will be deleted automactically.
-
-Whenever there is a new update, I will change the version to keep tracking.
 
 ## Tech Stack
 - HTML
@@ -52,10 +50,10 @@ Planned features:
 ## What I Learned
 - How to structure a small full-stack project
 - Handling user interactions
-- Store data by using SQLite3
+- Storing data by using PostgreSQL
 
 ## Version
-Current version: 0.1.2
+Current version: 0.1.3
 
 ## Changelog
 See [CHANGELOG.md](CHANGELOG.md)
