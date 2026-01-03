@@ -9,6 +9,9 @@ class HomeView(ListView):
     context_object_name = 'todoitems'
 
     def post(self, request, *args, **kwargs):
+        return self.addTodo(request, *args, **kwargs)   
+
+    def addTodo(self, request, *args, **kwargs):
         title = request.POST.get('title')
         description = request.POST.get('description')
         deadline_date = request.POST.get('deadline_date') or None
