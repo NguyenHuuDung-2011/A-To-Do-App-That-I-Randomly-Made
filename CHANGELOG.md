@@ -1,8 +1,11 @@
 # Changelog
 
 ## [0.1.3] - 2026-01-03
-### Added
-- Using PostgreSQL instead of SQLite3 for the longer storing
+## Added
+- Add testcases for development purpose
+
+### Fixed
+- Migrated database from SQLite to PostgreSQL for persistent production storage.
 
 ## [0.1.2] - 2026-01-03
 ### Added
