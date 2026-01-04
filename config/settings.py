@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 import dj_database_url
+# from urllib.parse import urlparse, parse_qsl
 
 load_dotenv()
 
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',
+        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
         conn_max_age=60,
         ssl_require=os.environ.get('DATABASE_URL', '').startswith('postgres')
     )
