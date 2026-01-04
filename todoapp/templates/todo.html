@@ -9,14 +9,14 @@
   </head>
   <body>
     <h1>Todo App</h1>
-    <form method="POST">
+    <form method="POST" action="{% url 'add-todo' %}">
       {% csrf_token %}
 
       <input type="text" name="title" placeholder="Name" required />
       <input type="text" name="description" placeholder="Description" />
       <input type="date" name="deadline_date" placeholder="Deadline" />
 
-      <button type="submit">Add Task</button>
+      <button type="submit" id="addTask">Add Task</button>
     </form>
     <h3>Your tasks:</h3>
     {% for item in todoitems %}

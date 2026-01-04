@@ -13,6 +13,33 @@ function getCookie(name) {
     return cookieValue;
 }
 
+document.getElementById('addTask').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const title = document.querySelector('input[name="title"]').value;
+    const description = document.querySelector('input[name="description"]').value;
+    const deadlineDate = document.querySelector('input[name="deadline_date"]').value;
+
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('description', description);
+    formData.append('deadline_date', deadlineDate);
+
+    fetch('/add/', {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': getCookie('csrftoken'),
+        },
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            location.reload();
+        }
+    })
+    .catch(error => console.error('Error:', error));
+})
+
 function deleteTask(event) {
     const checkbox = event.target;
     const taskId = checkbox.getAttribute('data-id');

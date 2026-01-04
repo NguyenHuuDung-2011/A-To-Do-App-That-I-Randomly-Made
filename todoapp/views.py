@@ -7,23 +7,20 @@ from .models import *
 class HomeView(ListView):
     model = TodoItem
     template_name = 'todo.html'
-    context_object_name = 'todoitems'
+    context_object_name = 'todoitems' 
 
-    def post(self, request, *args, **kwargs):
-        return self.addTodo(request, *args, **kwargs)   
+def addTodo(request):
+    title = request.POST.get('title')
+    description = request.POST.get('description')
+    deadline_date = request.POST.get('deadline_date') or None
 
-    def addTodo(self, request, *args, **kwargs):
-        title = request.POST.get('title')
-        description = request.POST.get('description')
-        deadline_date = request.POST.get('deadline_date') or None
+    if title:
+        TodoItem.objects.create(
+            title=title,
+            description=description
+        )
 
-        if title:
-            TodoItem.objects.create(
-                title=title,
-                description=description
-            )
-
-        return redirect('home')
+    return redirect('home')
     
 def deleteTodo(request, pk):
     if request.method == 'POST':
