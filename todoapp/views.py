@@ -1,14 +1,14 @@
-from django.shortcuts import redirect, get_object_or_404
+from django.shortcuts import redirect, get_object_or_404, render
 from django.http import JsonResponse
 from django.views.generic import ListView
 from .models import *
 import datetime
 
 # Create your views here.
-class HomeView(ListView):
-    model = TodoItem
-    template_name = 'todo.html'
-    context_object_name = 'todoitems' 
+def home(request):
+    todo_items = TodoItem.objects.all().order_by('-created_at')
+    context = {'todoitems': todo_items}
+    return render(request, 'todo.html', context)
 
 def addTodo(request):
     title = request.POST.get('title')
