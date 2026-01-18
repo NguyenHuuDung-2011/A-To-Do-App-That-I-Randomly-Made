@@ -53,7 +53,9 @@ Planned features:
 - Storing data by using PostgreSQL
 
 ## Version
-Current version: 0.1.3
+Current version: 1.0.0
+
+I am so pleased when updated this afterward. I have learned many things, got trouble with various type of mistakes, and finally had some experinces. I used to struggle with response-500 error for a long time, and then realized that because i didn't migrate.
 
 ## Changelog
 See [CHANGELOG.md](CHANGELOG.md)

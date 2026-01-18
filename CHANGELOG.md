@@ -1,11 +1,18 @@
 # Changelog
 
+## [1.0.0] - 2026-01-18
+Finally, this is the first time I complete an update with full of basic features. This is the final changes for this version
+### Added
+- Now, it is available to see the deadline date of each todo
+### Changed
+- Update the UI
+
 ## [0.1.3] - 2026-01-03
 ## Added
 - Add testcases for development purpose
 
 ### Fixed
-- Migrated database from SQLite to PostgreSQL for persistent production storage.
+- Migrated database from SQLite to PostgreSQL for persistent production storage
 
 ## [0.1.2] - 2026-01-03
 ### Added
