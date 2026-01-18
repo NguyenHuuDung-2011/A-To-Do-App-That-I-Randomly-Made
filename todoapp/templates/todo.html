@@ -22,7 +22,7 @@
     {% for item in todoitems %}
       <div class="todo-item" id="todo-{{ item.id }}">
         <p>{{ item.title }}</p>
-        <p>{{ item.description }}</p>
+        <p>Description: {% if item.description %}{{ item.description }}{% else %}None{% endif %}</p>
         <p>Deadline: {{ item.deadline_date }}</p>
         <input type="checkbox" class="todo-checkbox" data-id="{{ item.id }}"></input>
       </div>

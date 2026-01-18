@@ -24,7 +24,7 @@ body {
 
 .todo-item input[type="checkbox"] {
     grid-column: 2;
-    grid-row: 1 / span 3;
+    grid-row: 2;
     justify-self: right;
     align-self: center;
 }
