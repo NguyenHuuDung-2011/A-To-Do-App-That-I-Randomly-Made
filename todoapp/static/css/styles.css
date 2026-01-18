@@ -1,12 +1,13 @@
 body {
+    max-width: 800px;
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: auto;
     background-color: #f9f9f9;
 }
 
 .todo-item {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 10px 30px 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     background-color: #fff;
@@ -23,7 +24,7 @@ body {
 
 .todo-item input[type="checkbox"] {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
     justify-self: right;
     align-self: center;
 }
@@ -39,4 +40,11 @@ body {
     grid-row: 2;
     color: #666;
     font-size: 0.95rem;
+}
+
+.todo-item p:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
