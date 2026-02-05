@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.0] - 2026-02-05
+### Added
+- Authorizing features and apply account to show right todos to match users
+
 ## [1.0.0] - 2026-01-18
 Finally, this is the first time I complete an update with full of basic features. This is the final changes for this version
 ### Added
@@ -8,7 +12,7 @@ Finally, this is the first time I complete an update with full of basic features
 - Update the UI
 
 ## [0.1.3] - 2026-01-03
-## Added
+### Added
 - Add testcases for development purpose
 
 ### Fixed
