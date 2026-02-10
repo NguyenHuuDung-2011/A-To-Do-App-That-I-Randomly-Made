@@ -1,4 +1,3 @@
-from django.contrib.auth import authenticate
 from django.shortcuts import redirect, get_object_or_404, render
 from django.http import JsonResponse
 from django.contrib import messages

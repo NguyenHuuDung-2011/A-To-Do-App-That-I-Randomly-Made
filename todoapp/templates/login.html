@@ -5,18 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-    <form method="POST" action="{% url 'home' %}">
+    <form method="POST" action="{% url 'login' %}">
         {% csrf_token %}
 
         <label>Username: </label>
         <label>
-            <input type="text">
+            <input type="text" name="username">
         </label>
         <label>Password: </label>
         <label>
-            <input type="password">
+            <input type="password" name="password">
         </label>
         <button type="submit">Login</button>
+
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color: red;">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
     </form>
 </body>
 </html>
